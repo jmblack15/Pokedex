@@ -1,1 +1,6 @@
-<p>pokemon works!</p>
+<h1>{{pokemon.name}}</h1>
+<img [src]="pokemon.image" [alt]="pokemon.name">
+<div *ngFor="let stat of pokemonStats">
+  <p>{{stat.stat.name}}</p>
+  <p>{{stat.base_stat}}</p>
+</div>

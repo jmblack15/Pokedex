@@ -11,7 +11,6 @@ export class PokedexComponent implements OnInit {
 
 
   pokemons: any[] = [];
-
   constructor(
     private getPokemonsService: GetPokemonsService,
   ) { }
@@ -31,15 +30,10 @@ export class PokedexComponent implements OnInit {
             image: `../../../assets/images/${i < 10 ? '00' + i : i < 100 ? '0' + i : i}.png`,
             name: res.name,
             types: res.types
-          }
+          };
           this.pokemons.push(pokemonData)
         },
       )
     }
   }
-
-
-  // infoPokemon(pokemon: any) {
-  //   this.router.navigateByUrl(`pokemon/${pokemon.position}`);
-  // }
 }

@@ -1,7 +1,14 @@
 <div>
   <div *ngFor="let pokemon of pokemons">
-    <h3>{{pokemon.name}}</h3>
+    <h2>{{pokemon.name}}</h2>
     <img [src]="pokemon.image" [alt]="pokemon.name" [routerLink]="['/pokemon', pokemon.position]">
-    <div></div>
+    <p>{{pokemon.position}}</p>
+    <div *ngIf="pokemon.types.length === 2; else elseType">
+      <p>{{pokemon.types[0].type.name}}</p>
+      <p>{{pokemon.types[1].type.name}}</p>
+    </div>
+    <ng-template #elseType>
+      <p>{{pokemon.types[0].type.name}}</p>
+    </ng-template>
   </div>
 </div>>

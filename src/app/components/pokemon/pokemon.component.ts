@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { GetPokemonsService } from '../../services/get-pokemons.service'
+import { ActivatedRoute, Params } from '@angular/router';
+import { PokemonInterface } from 'src/app/models/pokemon.model';
 
 @Component({
   selector: 'app-pokemon',
@@ -7,9 +10,40 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PokemonComponent implements OnInit {
 
-  constructor() { }
+  pokemon: PokemonInterface = {
+    position: 0,
+    image: '',
+    name: '',
+    weight: 0,
+    height: 0,
+  }
+
+  pokemonStats: any = [];
+
+  constructor(
+    private getPokemonService: GetPokemonsService,
+    private activatedRouter: ActivatedRoute
+  ) {
+    this.activatedRouter.params.subscribe(
+      params => {
+        this.getPokemon(params['id'])
+      }
+    )
+  }
 
   ngOnInit(): void {
+  }
+
+  getPokemon(id: any) {
+    this.getPokemonService.getPokemons(id).subscribe(
+      res => {
+        this.pokemon.name = res.name;
+        this.pokemonStats = res.stats;
+        this.pokemon.weight = res.weight;
+        this.pokemon.height = res.height;
+        this.pokemon.image = `../../../assets/images/${id < 10 ? '00' + id : id < 100 ? '0' + id : id}.png`;
+      }
+    );
   }
 
 }
