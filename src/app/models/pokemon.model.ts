@@ -1,6 +1,16 @@
-export interface Pokemon {
-  id?: string,
+interface States{
+  baseState: number,
   name: string,
-  abilities?: [],
-  types?: []
+}
+
+interface Type {
+  name: ''
+}
+
+export interface PokemonInterface {
+  position: number,
+  image: string,
+  name: string,
+  types?: Type[]
+  states?: States[]
 }
