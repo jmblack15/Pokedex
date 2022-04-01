@@ -2,6 +2,8 @@
 
 Professor Oak, use the pokedex to get information on the pokemons of the Kanto region, you can do it too
 
+If you want to know all the pokemons of the Kanto region click [Here](https://pokedex-jmblack15.vercel.app/home)
+
 ## Table of contents
 
 - [Overview](#overview)
@@ -28,7 +30,7 @@ Professor Oak, use the pokedex to get information on the pokemons of the Kanto r
 ### Links
 
 - [Solution URL: ](https://github.com/jmblack15/Pokedex)
-- [Live Site URL: ]()
+- [Live Site URL: ](https://pokedex-jmblack15.vercel.app/home)
 
 ## My process
 
