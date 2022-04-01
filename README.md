@@ -1,27 +1,50 @@
 # Pokedex
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.4.
+Professor Oak, use the pokedex to get information on the pokemons of the Kanto region, you can do it too
 
-## Development server
+## Table of contents
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#Links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-## Code scaffolding
+## Overview
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### The challenge
 
-## Build
+-See the image, name, types of the first 151 Pokémon.
+-View the attributes or stats that the selected pokemon has.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Screenshot
 
-## Running unit tests
+![](https://i.ibb.co/f9QR37h/pokedexinicio.png)
+![](https://i.ibb.co/MhfVdNC/pokedex.png)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Links
 
-## Running end-to-end tests
+- [Solution URL: ](https://github.com/jmblack15/Pokedex)
+- [Live Site URL: ]()
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## My process
 
-## Further help
+### Built with
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Semantic HTML5 markup
+- CSS custom properties (BEM methodology)
+- SASS
+- CSS Grid , Css flexbox
+- Mobile-first workflow
+- Angular
+- TypeScript
+- [PokeApi](https://pokeapi.co/)
+
+## Author
+
+- GitHub - [jmblack15](https://github.com/jmblack15)
+- codewars - [jmblack15](https://www.codewars.com/users/jmblack15)
+- LinkedIn - [Jose Manuel Osorio](https://www.linkedin.com/in/jose-manuel-osorio/)
