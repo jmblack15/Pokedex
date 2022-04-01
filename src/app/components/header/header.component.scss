@@ -1,0 +1,77 @@
+@import '../../../assets/styles/vars';
+
+header {
+  width : 100%;
+  height: 100vh;
+
+  .title {
+    width : 100%;
+    height: 15%;
+    cursor: pointer;
+
+    img {
+      width : 100%;
+      height: 100%;
+    }
+  }
+
+  .container--image {
+    width          : 100%;
+    height         : 55%;
+    display        : flex;
+    justify-content: center;
+
+    .oak--image {
+      width: 180px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .container--text {
+    display        : flex;
+    justify-content: center;
+    width          : 100%;
+    height         : 30%;
+
+    .oak--text {
+      width : 80%;
+      height: auto;
+
+      p {
+        text-align: center;
+      }
+    }
+  }
+
+  .header-button {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 525px) {
+  header {
+    display       : flex;
+    flex-direction: column;
+
+    .header-button {
+      display      : inline;
+      text-align   : center;
+      margin-bottom: 40px;
+      cursor       : pointer;
+
+
+      a {
+        text-decoration : none;
+        background-color: $maincolor;
+        border          : 2px solid $normal;
+        padding         : 15px;
+        border-radius   : 15px;
+        color           : $whitecolor;
+        font-weight     : bolder;
+      }
+    }
+  }
+}

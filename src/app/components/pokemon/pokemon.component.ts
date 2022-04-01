@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { GetPokemonsService } from '../../services/get-pokemons.service'
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute} from '@angular/router';
 import { PokemonInterface } from 'src/app/models/pokemon.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pokemon',
   templateUrl: './pokemon.component.html',
-  styleUrls: ['./pokemon.component.sass']
+  styleUrls: ['./pokemon.component.scss']
 })
 export class PokemonComponent implements OnInit {
 
@@ -21,6 +22,7 @@ export class PokemonComponent implements OnInit {
   pokemonStats: any = [];
 
   constructor(
+    private router: Router,
     private getPokemonService: GetPokemonsService,
     private activatedRouter: ActivatedRoute
   ) {
@@ -44,6 +46,10 @@ export class PokemonComponent implements OnInit {
         this.pokemon.image = `../../../assets/images/${id < 10 ? '00' + id : id < 100 ? '0' + id : id}.png`;
       }
     );
+  }
+
+  goPokedex() {
+    this.router.navigateByUrl('home')
   }
 
 }

@@ -1,10 +1,20 @@
-<div class="header--logo"></div>
-<img src="../../../assets/images/logo.png" alt="logo" (click)="home()">
-<h1>Pokedex</h1>
-<div class="header--Oak">
-  <img src="../../../assets/images/Profesor_Oak.png" alt="Professor Oak">
-  <p>
-    Hello, I am Professor Oak, I am an expert and passionate about researching the pokemon of the Kanto region, here I
-    have my pokedex, let's see the data that I have collected so far
-  </p>
-</div>
+<header>
+  <div class="title"><img src="../../../assets/images/logo.png" alt="logo" (click)="goPokedex()"></div>
+  <div class="container--image">
+    <div class="oak--image">
+      <img src="../../../assets/images/Profesor_Oak.png" alt="Professor Oak">
+    </div>
+  </div>
+  <div class="container--text">
+    <div class="oak--text">
+      <p>
+        Hello, I am Professor Oak, I am an expert and passionate about researching the pokemon of the Kanto region, here
+        I have my pokédex, let's see the data that I have collected so far
+      </p>
+    </div>
+  </div>
+  <div (click)="toPokedex()"  class="header-button">
+    <a>Go Pokedex</a>
+  </div>
+
+</header>

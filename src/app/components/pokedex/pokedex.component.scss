@@ -1,0 +1,111 @@
+@import '../../../assets/styles/vars';
+
+#pokedex {
+  margin-top      : 50px;
+  width           : 100%;
+  background-color: $maincolor;
+  border          : 3px solid $blackcolor;
+  display         : flex;
+  flex-direction  : column;
+  align-items     : center;
+  color           : black;
+
+  .pokemons-container {
+
+    margin          : 20px 0;
+    display         : flex;
+    flex-direction  : row;
+    align-items     : center;
+    justify-content : center;
+    border          : 1px solid $blackcolor;
+    background-color: $whitecolor;
+    width           : 80%;
+    height          : 250px;
+    border-radius   : 10px;
+    box-shadow      : 0px 9px 0px $blackcolor;
+    transition      : all .3s;
+
+    &:hover {
+      background-color: $bug;
+    }
+
+    .pokemons-title {
+      display       : flex;
+      flex-direction: row;
+      gap           : 20px;
+      text-align    : center;
+      width         : 60%;
+      margin-top    : 10px;
+      cursor        : pointer;
+
+      .pokemon-position {
+        border-radius: 50%;
+        color        : $maincolor;
+        font-weight  : bolder;
+        font-size    : 2rem;
+        margin-left  : 3px;
+      }
+
+      .pokemon-name {
+        font-size  : 3rem;
+        font-weight: bolder;
+      }
+    }
+
+    .img-container {
+      width    : 80%;
+      max-width: 200px;
+      cursor   : pointer;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .pokemons-types {
+      gap           : 20px;
+      display       : flex;
+      flex-direction: column;
+      margin-right  : 15px;
+
+
+      .types {
+        border       : 1px solid black;
+        font-weight  : bold;
+        padding      : 10px;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 445px) {
+  #pokedex {
+    margin       : 0 auto;
+    width        : 445px;
+    border-radius: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #pokedex {
+    width                : 768px;
+    display              : grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items        : center;
+  }
+
+
+}
+
+
+@media (min-width: 1440px) {
+  #pokedex {
+    width                : 1114px;
+    display              : grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items        : center;
+  }
+
+
+}

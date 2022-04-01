@@ -1,14 +1,22 @@
-<div>
-  <div *ngFor="let pokemon of pokemons">
-    <h2>{{pokemon.name}}</h2>
-    <img [src]="pokemon.image" [alt]="pokemon.name" [routerLink]="['/pokemon', pokemon.position]">
-    <p>{{pokemon.position}}</p>
-    <div *ngIf="pokemon.types.length === 2; else elseType">
-      <p>{{pokemon.types[0].type.name}}</p>
-      <p>{{pokemon.types[1].type.name}}</p>
+<div id="pokedex">
+  <div *ngFor="let pokemon of pokemons" class="pokemons-container">
+    <div>
+      <div class="pokemons-title">
+        <p class="pokemon-position">{{pokemon.position}}</p>
+        <h2 class="pokemon-name" [routerLink]="['/pokemon', pokemon.position]">{{pokemon.name}}</h2>
+      </div>
+      <div class="img-container">
+        <img [src]="pokemon.image" [alt]="pokemon.name" [routerLink]="['/pokemon', pokemon.position]">
+      </div>
     </div>
-    <ng-template #elseType>
-      <p>{{pokemon.types[0].type.name}}</p>
-    </ng-template>
+    <div>
+      <div class="pokemons-types" *ngIf="pokemon.types.length === 2">
+        <p class="types">{{pokemon.types[0].type.name}}</p>
+        <p class="types">{{pokemon.types[1].type.name}}</p>
+      </div>
+      <div class="pokemons-types" *ngIf="pokemon.types.length === 1">
+        <p class="types">{{pokemon.types[0].type.name}}</p>
+      </div>
+    </div>
   </div>
-</div>>
+</div>

@@ -1,6 +1,15 @@
-<h1>{{pokemon.name}}</h1>
-<img [src]="pokemon.image" [alt]="pokemon.name">
-<div *ngFor="let stat of pokemonStats">
-  <p>{{stat.stat.name}}</p>
-  <p>{{stat.base_stat}}</p>
+<div class="info-pokemon">
+  <div class="back-pokedex" (click)="goPokedex()"><span>Back Pokedex</span></div>
+  <h1>{{pokemon.name}}</h1>
+  <div class="container-info">
+    <div class="container-image">
+      <img [src]="pokemon.image" [alt]="pokemon.name">
+    </div>
+    <div class="info-stats">
+      <div *ngFor="let stat of pokemonStats" >
+        <p class="name-stat">{{stat.stat.name}}</p>
+        <p class="value-stat">{{stat.base_stat}}</p>
+      </div>
+    </div>
+  </div>
 </div>

@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital@1&display=swap');
+@import './assets/styles/vars';
+
+* {
+  box-sizing: border-box;
+  margin    : 0;
+  padding   : 0;
+}
+
+html {
+  font-size      : 62.5%;
+  font-family    : 'Courier Prime', monospace;
+}
+
+body {
+
+  font-size       : 1.6rem;
+  background-color: $blackcolor;
+  color           : $whitecolor;
+  // width: 100vw;
+  // height: 100vh;
+
+  img {
+    max-width : 300px;
+    max-height: 300px;
+  }
+}
